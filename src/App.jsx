@@ -1,29 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './components/Header.jsx'
-import HeroSection from './components/HeroSection.jsx'
-import Features from './components/Features.jsx'
-import Workflow from './components/Workflow.jsx'
-import Footer from './components/Footer.jsx'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MainLayout from "./layout/MainLayout";
+import Home from "./pages/Home";
+// import Login from "./pages/Login";
+// import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
-
   return (
-    <>
-      <div className="min-h-screen">
-        <Header />
-        <main className="pt-16">
-          <HeroSection />
-          <Features />
-          <Workflow />
-          <Footer/>
-        </main>
+    <Router>
+      {/* Auto scroll to top on route change */}
+      {/* <ScrollToTop /> */}
 
-      </div>
-    </>
-  )
+      {/* Shared layout (Header + Footer) */}
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/login" element={<Login />} /> */}
+        </Routes>
+      </MainLayout>
+    </Router>
+  );
 }
 
-export default App
+export default App;

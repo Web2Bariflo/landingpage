@@ -89,10 +89,10 @@ const featuresData = [
 
 const Features = () => {
   return (
-    <section className="bg-blue-50 py-24">
-      <div className="container mx-auto px-6 lg:px-7">
+    <section className="bg-blue-50">
+      <div className="container mx-auto px-6 lg:px-20 mt-12">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
             Empowering Business{" "}
             <span className="text-blue-600">Key Features</span>
@@ -104,7 +104,7 @@ const Features = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {featuresData.map((feature, index) => (
             <div
               key={index}

@@ -14,7 +14,7 @@ const Header = () => {
       bg-gradient-to-t  from-blue-700 via-blue-600 to-blue-400 
       backdrop-blur-md text-white shadow-lg z-50">
 
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div className="max-w-8xl mx-auto flex justify-between items-center px-6 md:px-20 py-4">
         {/* --- Logo --- */}
         <motion.h1
           initial={{ opacity: 0, x: -30 }}

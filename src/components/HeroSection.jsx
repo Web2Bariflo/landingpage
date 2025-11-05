@@ -14,9 +14,10 @@ const HeroSection = () => {
       {/* LEFT SIDE - TEXT AREA */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 2.0, delay: 0.2 }}
-        className="flex-1 max-w-xl text-center md:text-left space-y-6 mt-16 md:mt-0"
+        // animate={{ opacity: 1, x: 0 }}
+        whileInView={{opacity: 1 , x: 0}}
+        transition={{ duration: 2.0, delay: 0.1 }}
+        className="flex-1 max-w-xl text-center md:text-left space-y-6 mt-16 md:mt-8 mb-8"
       >
    {/* Top Tag */}
         <p className="text-sm text-blue-200 uppercase tracking-widest">

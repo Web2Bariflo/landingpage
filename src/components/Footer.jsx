@@ -47,7 +47,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">Follow Us</h4>
+              <h4 className="font-semibold text-white mb-4 md:ms-4">Follow Us</h4>
               <div className="flex space-x-4 text-blue-200">
                 <FaFacebookF className="hover:text-white cursor-pointer" />
                 <FaTwitter className="hover:text-white cursor-pointer" />

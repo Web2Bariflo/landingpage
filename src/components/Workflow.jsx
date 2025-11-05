@@ -1,70 +1,82 @@
-import React from "react";
-// import workflowIllustration from "../assets/hero-bg.svg";
- // placeholder image
-
-const workflowSteps = [
-  {
-    title: "Admin",
-    description: "Create tasks, assign priorities, and monitor overall progress.",
-    icon: "🛠️",
-    bg: "bg-blue-200",
-  },
-  {
-    title: "Manager",
-    description: "Review tasks, approve assignments, and coordinate with team members.",
-    icon: "📋",
-    bg: "bg-green-200",
-  },
-  {
-    title: "Team",
-    description: "Complete assigned tasks, update status, and provide feedback.",
-    icon: "👷",
-    bg: "bg-yellow-200",
-  },
-];
+import { motion } from "framer-motion";
+import workflowImg from "../assets/images/dashboardimg.jpg";
+import { FaTasks, FaUserCheck, FaChartLine, FaUsers } from "react-icons/fa";
 
 const Workflow = () => {
   return (
-    <section className="bg-blue-50 py-24">
-      <div className="container mx-auto px-6 lg:px-20">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-            Task Assignment <span className="text-blue-600">Workflow</span>
+    <section className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 py-16">
+      <div className="max-w-8xl mx-auto px-20 flex flex-col md:flex-row items-center gap-20">
+
+        {/* --- Left Image --- */}
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="flex-1"
+        >
+          <img
+            src={workflowImg}
+            alt="Workflow illustration"
+            className="rounded-2xl shadow-2xl w-full object-cover"
+          />
+        </motion.div>
+
+        {/* --- Right Content --- */}
+        <motion.div
+          initial={{ opacity: 0, x: 60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="flex-1"
+        >
+          <h2 className="text-4xl md:text-5xl font-extrabold text-blue-800 mb-4">
+            Simplified <span className="text-blue-500">Task Flow</span>
           </h2>
-          <p className="text-blue-700 max-w-2xl mx-auto text-lg">
-            Understand how tasks flow from Admin to Manager to Team, ensuring smooth collaboration and accountability.
+          <p className="text-gray-600 mb-6">
+            Manage, assign, and track your team's progress seamlessly with our smart
+            workflow engine — designed for admins, managers, and team members.
           </p>
-        </div>
 
-        {/* Workflow Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {workflowSteps.map((step, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <div
-                className={`w-12 h-12 flex items-center justify-center rounded-lg mb-4 ${step.bg}`}
-              >
-                <span className="text-2xl">{step.icon}</span>
-              </div>
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                {step.title}
-              </h3>
-              <p className="text-blue-700 text-sm">{step.description}</p>
+          {/* --- Cards --- */}
+          <div className="flex flex-wrap gap-4 mb-6">
+            <div className="flex items-center gap-3 bg-blue-600 text-white px-4 py-2 rounded-xl shadow-lg">
+              <FaTasks className="text-xl" />
+              Task Assignment
             </div>
-          ))}
-        </div>
+            <div className="flex items-center gap-3 bg-blue-500 text-white px-4 py-2 rounded-xl shadow-lg">
+              <FaUserCheck className="text-xl" />
+              Team Review
+            </div>
+          </div>
 
-        {/* Illustration */}
-        <div className="mt-20 text-center">
-          {/* <img
-            src={workflowIllustration}
-            alt="Workflow Illustration"
-            className="mx-auto w-full max-w-2xl rounded-xl shadow-lg"
-          /> */}
-        </div>
+          {/* --- List --- */}
+          <ul className="space-y-3 text-gray-700">
+            <li className="flex items-center gap-3">
+              <FaUsers className="text-blue-500" />
+              Assign tasks to multiple team members easily.
+            </li>
+            <li className="flex items-center gap-3">
+              <FaChartLine className="text-blue-500" />
+              Manager reviews progress and approves completion.
+            </li>
+            <li className="flex items-center gap-3">
+              <FaUserCheck className="text-blue-500" />
+              Admin oversees reports and workflow analytics.
+            </li>
+            <li className="flex items-center gap-3">
+              <FaTasks className="text-blue-500" />
+              Auto-generate performance summaries for each project.
+            </li>
+          </ul>
+
+          {/* --- CTA Button --- */}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="mt-8 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-all"
+          >
+            Explore Workflow →
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   );
