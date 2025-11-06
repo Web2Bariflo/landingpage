@@ -90,14 +90,14 @@ const featuresData = [
 const Features = () => {
   return (
     <section className="bg-blue-50">
-      <div className="container mx-auto px-6 lg:px-20 mt-12">
+      <div className="container mx-auto px-6 lg:px-7 mt-12">
         {/* Section Header */}
         <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-8">
             Empowering Business{" "}
             <span className="text-blue-600">Key Features</span>
           </h2>
-          <p className="text-blue-700 max-w-2xl mx-auto text-lg">
+          <p className="text-blue-700 max-w-2xl mx-auto text-lg mb-8">
             Our platform helps you manage tasks, collaborate effectively, and
             boost productivity with ease.
           </p>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // ✅ Added import
 import workflowImg from "../assets/images/dashboardimg.jpg";
 import { FaTasks, FaUserCheck, FaChartLine, FaUsers } from "react-icons/fa";
 
@@ -68,14 +69,19 @@ const Workflow = () => {
             </li>
           </ul>
 
-          {/* --- CTA Button --- */}
-          <motion.button
+          {/* --- CTA Button (Fixed) --- */}
+          <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-8 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-all"
+            className="mt-8 inline-block"
           >
-            Explore Workflow →
-          </motion.button>
+            <Link
+              to="/TaskFlow" // ✅ Correct navigation
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-all inline-block"
+            >
+              Explore Workflow →
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </section>

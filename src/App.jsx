@@ -1,22 +1,20 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainLayout from "./layout/MainLayout";
 import Home from "./pages/Home";
-// import Login from "./pages/Login";
-// import ScrollToTop from "./components/ScrollToTop";
+import TaskFlow from "./components/TaskFlow";
+import Pricing from "./pages/Pricing";
 
 function App() {
   return (
     <Router>
-      {/* Auto scroll to top on route change */}
-      {/* <ScrollToTop /> */}
-
-      {/* Shared layout (Header + Footer) */}
-      <MainLayout>
-        <Routes>
+      <Routes>
+        {/* Wrap all pages that share the header & footer */}
+        <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/login" element={<Login />} /> */}
-        </Routes>
-      </MainLayout>
+          <Route path="/TaskFlow" element={<TaskFlow />} />
+          <Route path="/pricing" element={<Pricing/>} />
+        </Route>
+      </Routes>
     </Router>
   );
 }

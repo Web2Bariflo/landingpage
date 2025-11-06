@@ -1,11 +1,16 @@
 import { motion } from "framer-motion";
 import heroImg from "../assets/images/dashboardimg.jpg";
+import { useNavigate } from "react-router-dom";
 
 // Temporary image from Unsplash
 
 
 
+
 const HeroSection = () => {
+
+  const navigate = useNavigate();
+
   return (
     <section
       className="min-h-[90vh] flex flex-col md:flex-row items-center justify-between
@@ -15,11 +20,11 @@ const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         // animate={{ opacity: 1, x: 0 }}
-        whileInView={{opacity: 1 , x: 0}}
+        whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 2.0, delay: 0.1 }}
         className="flex-1 max-w-xl text-center md:text-left space-y-6 mt-16 md:mt-8 mb-8"
       >
-   {/* Top Tag */}
+        {/* Top Tag */}
         <p className="text-sm text-blue-200 uppercase tracking-widest">
           ✨ Manage Every Task — From Idea to Completion
         </p>
@@ -42,8 +47,8 @@ const HeroSection = () => {
 
         {/* Button */}
         <button
-          className="bg-white text-blue-800 font-semibold px-6 py-3 rounded-lg shadow-md 
-          hover:bg-blue-100 transition duration-300"
+          onClick={() => navigate("/pricing")}
+          className="bg-white text-blue-800 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-100 transition duration-300"
         >
           Start Free Trial
         </button>
@@ -61,11 +66,11 @@ const HeroSection = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="flex-1 flex justify-center mt-10 md:mt-0"
       > */}
-        <img
-          src={heroImg}
-          alt="TaskFlow Dashboard"
-          className="w-[320px] md:w-[480px] md:h-[450px] rounded-2xl shadow-2xl border border-blue-300/30"
-        />
+      <img
+        src={heroImg}
+        alt="TaskFlow Dashboard"
+        className="w-[320px] md:w-[480px] md:h-[450px] rounded-2xl shadow-2xl border border-blue-300/30"
+      />
       {/* </motion.div> */}
     </section>
   );
