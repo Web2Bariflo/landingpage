@@ -15,7 +15,7 @@ const companies = [
 
 const CompanyScroll = () => {
   return (
-    <section className="relative bg-gradient-to-r from-blue-100 via-blue-200 to-blue-100 py-16 overflow-hidden">
+    <section className="relative bg-gradient-to-b bg-white py-16 overflow-hidden">
       <h2 className="text-center text-3xl md:text-4xl font-extrabold text-blue-800 mb-16">
         Trusted by Innovative Teams
       </h2>

@@ -6,7 +6,7 @@ import { FaTasks, FaUserCheck, FaChartLine, FaUsers } from "react-icons/fa";
 const Workflow = () => {
   return (
     <section className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 py-16">
-      <div className="max-w-8xl mx-auto px-20 flex flex-col md:flex-row items-center gap-20">
+      <div className="max-w-8xl mx-auto md:px-20 px-7 flex flex-col md:flex-row items-center gap-20">
 
         {/* --- Left Image --- */}
         <motion.div

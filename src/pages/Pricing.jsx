@@ -64,7 +64,7 @@ const PricingSection = () => {
   const [billing, setBilling] = useState("monthly");
 
   return (
-    <section className="bg-blue-50 py-16 px-4 sm:px-10 mt-10">
+    <section className="bg-blue-50 py-16 px-1 sm:px-10 mt-10">
       <div className="max-w-4xl mx-auto text-center mb-8">
         <h2 className="text-3xl font-bold text-blue-900">Pricing</h2>
         <p className="mt-2 text-blue-700">
@@ -91,7 +91,7 @@ const PricingSection = () => {
         </div>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-4 max-w-7xl mx-auto">
+      <div className="grid gap-6 md:grid-cols-4 max-w-auto mx-auto px-4">
         {plans.map((plan) => (
           <div
             key={plan.name}

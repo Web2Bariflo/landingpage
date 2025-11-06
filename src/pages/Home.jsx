@@ -8,6 +8,9 @@ import CompanyScroll from "./Scroll";
 // import ScrollToTop from "../components/ScrollToTop";
 import TeamManagement from "../components/TeamManagement";
 import TaskFlow from "../components/TaskFlow";
+import Testimonials from "./Testonomials";
+import About from "./About";
+import Contact from "./Contact";
 
 const Home = () => {
   return (
@@ -19,7 +22,12 @@ const Home = () => {
         <Features />
         <Workflow />
         <TaskFlow />
+        <Testimonials />
         <CompanyScroll />
+
+        
+        {/* <Contact /> */}
+        {/* <About /> */}
         {/* <TeamManagement /> */}
       </main>
     </>

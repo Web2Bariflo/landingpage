@@ -1,23 +1,35 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
-// import logo from "../assets/logo.png";
- // your project logo
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="bg-blue-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-6 lg:px-20">
-        {/* Top section: Logo + Description */}
+        {/* 🔹 Top section: Logo + Description */}
         <div className="flex flex-col md:flex-row md:justify-between mb-12">
+          {/* Left Side */}
           <div className="mb-8 md:mb-0 md:w-1/3">
-            {/* <img src={} alt="Logo" className="w-36 mb-4" /> */}
-            <p className="text-blue-200 text-sm">
-              TaskAssign helps your team manage tasks efficiently, track progress, 
-              and collaborate seamlessly.
+            <div className="flex items-center space-x-3 mb-4">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/906/906334.png" // ✅ Google-hosted blue task logo
+                alt="TaskAssign Logo"
+                className="w-12 h-12"
+              />
+              <h3 className="text-xl font-semibold text-white">TaskFlow</h3>
+            </div>
+            <p className="text-blue-200 text-sm leading-relaxed">
+              Empower your team with smarter task management.  
+              TaskAssign streamlines workflows, boosts productivity,  
+              and brings clarity to every project — all in one place.
             </p>
           </div>
 
-          {/* Footer Links */}
+          {/* 🔹 Footer Links */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 md:w-2/3">
             <div>
               <h4 className="font-semibold text-white mb-4">Product</h4>
@@ -49,18 +61,18 @@ export default function Footer() {
             <div>
               <h4 className="font-semibold text-white mb-4 md:ms-4">Follow Us</h4>
               <div className="flex space-x-4 text-blue-200">
-                <FaFacebookF className="hover:text-white cursor-pointer" />
-                <FaTwitter className="hover:text-white cursor-pointer" />
-                <FaLinkedinIn className="hover:text-white cursor-pointer" />
-                <FaInstagram className="hover:text-white cursor-pointer" />
+                <FaFacebookF className="hover:text-white cursor-pointer transition" />
+                <FaTwitter className="hover:text-white cursor-pointer transition" />
+                <FaLinkedinIn className="hover:text-white cursor-pointer transition" />
+                <FaInstagram className="hover:text-white cursor-pointer transition" />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom section: Copyright */}
+        {/* 🔹 Bottom section */}
         <div className="border-t border-blue-800 pt-6 text-center text-blue-200 text-sm">
-          © {new Date().getFullYear()} TaskAssign. All rights reserved.
+          © {new Date().getFullYear()} TaskFlow. All rights reserved.
         </div>
       </div>
     </footer>
