@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import mainlogo from "../assets/images/newlogoo.jpg"; // ✅ Blue clipboard logo from Google CDN
+import mainlogo from "../assets/images/logo2.png"; // ✅ Blue clipboard logo from Google CDN
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,28 +15,31 @@ const Header = () => {
   ];
 
   return (
-    <header
-      className="fixed top-0 left-0 w-full 
-      bg-gradient-to-t from-blue-700 via-blue-600 to-blue-400 
-      backdrop-blur-md text-white shadow-lg z-50"
+<header
+  className="fixed top-0 left-0 w-full 
+  bg-gradient-to-t from-blue-700 via-blue-600 to-blue-400 
+  backdrop-blur-md text-white shadow-lg z-50"
+>
+  <div className="max-w-8xl mx-auto flex justify-between items-center px-2 md:px-12 py-4 h-16">
+    {/* --- Logo + Title --- */}
+    <motion.div
+      initial={{ opacity: 0, x: -30 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1.0, delay: 0.2 }}
+      className="flex items-center gap-2 cursor-pointer"
     >
-      <div className="max-w-8xl mx-auto flex justify-between items-center px-6 md:px-20 py-4">
-        {/* --- Logo + Title --- */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.0, delay: 0.2 }}
-          className="flex items-center gap-2 cursor-pointer"
-        >
-          <Link to="/" className="flex items-center gap-3">
-            <img
-              src={mainlogo} // ✅ Blue clipboard logo from Google CDN
-              alt="TaskFlow Logo"
-              className="w-30 h-10 drop-shadow-m text-white"
-            />
-            {/* <h1 className="text-2xl font-bold tracking-wide">TaskFlow</h1> */}
-          </Link>
-        </motion.div>
+      <Link to="/" className="flex items-center gap-3">
+        <div className="flex items-center justify-center h-14 w-auto overflow-hidden">
+          <img
+            src={mainlogo}
+            alt="TaskFlow Logo"
+            className="h-50 w-auto object-contain drop-shadow-md"
+          />
+        </div>
+        {/* <h1 className="text-2xl font-bold tracking-wide">TaskFlow</h1> */}
+      </Link>
+    </motion.div>
+
 
         {/* --- Desktop Menu --- */}
         <nav className="hidden md:flex space-x-8">

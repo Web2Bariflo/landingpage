@@ -6,9 +6,11 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
+import logo from "../assets/images/logo2.png"
+
 export default function Footer() {
   return (
-    <footer className="bg-blue-900 text-white pt-16 pb-8">
+    <footer className="bg-blue-900 text-white pt-6 pb-8">
       <div className="container mx-auto px-6 lg:px-20">
         {/* 🔹 Top section: Logo + Description */}
         <div className="flex flex-col md:flex-row md:justify-between mb-12">
@@ -16,21 +18,21 @@ export default function Footer() {
           <div className="mb-8 md:mb-0 md:w-1/3">
             <div className="flex items-center space-x-3 mb-4">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/906/906334.png" // ✅ Google-hosted blue task logo
+                src={logo} // ✅ Google-hosted blue task logo
                 alt="TaskAssign Logo"
-                className="w-12 h-12"
+                className="w-60 h-30"
               />
-              <h3 className="text-xl font-semibold text-white">TaskFlow</h3>
+              {/* <h3 className="text-xl font-semibold text-white">TaskFlow</h3> */}
             </div>
             <p className="text-blue-200 text-sm leading-relaxed">
               Empower your team with smarter task management.  
-              TaskAssign streamlines workflows, boosts productivity,  
+              TaskAssign streamlines workflows, boosts productivity,
               and brings clarity to every project — all in one place.
             </p>
           </div>
 
           {/* 🔹 Footer Links */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 md:w-2/3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 md:w-2/3 mt-12">
             <div>
               <h4 className="font-semibold text-white mb-4">Product</h4>
               <ul className="space-y-2 text-blue-200 text-sm">
