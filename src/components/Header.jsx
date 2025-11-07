@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import mainlogo from "../assets/images/newlogoo.jpg"; // ✅ Blue clipboard logo from Google CDN
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,11 +30,11 @@ const Header = () => {
         >
           <Link to="/" className="flex items-center gap-3">
             <img
-              src="https://cdn-icons-png.flaticon.com/512/906/906334.png" // ✅ Blue clipboard logo from Google CDN
+              src={mainlogo} // ✅ Blue clipboard logo from Google CDN
               alt="TaskFlow Logo"
-              className="w-10 h-10 drop-shadow-md"
+              className="w-30 h-10 drop-shadow-m text-white"
             />
-            <h1 className="text-2xl font-bold tracking-wide">TaskFlow</h1>
+            {/* <h1 className="text-2xl font-bold tracking-wide">TaskFlow</h1> */}
           </Link>
         </motion.div>
 
