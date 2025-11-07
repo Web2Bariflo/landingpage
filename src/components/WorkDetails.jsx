@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; // ✅ Added import
-import workflowImg from "../assets/images/dashboardimg.jpg";
+import Taskflow from "../assets/images/Taskflow.png";
 import { FaTasks, FaUserCheck, FaChartLine, FaUsers } from "react-icons/fa";
 
 const Workflow = () => {
@@ -16,9 +16,9 @@ const Workflow = () => {
           className="flex-1"
         >
           <img
-            src={workflowImg}
+            src={Taskflow}
             alt="Workflow illustration"
-            className="rounded-2xl shadow-2xl w-full object-cover"
+            className="rounded-2xl shadow-2xl w-full object-cover h-96"
           />
         </motion.div>
 

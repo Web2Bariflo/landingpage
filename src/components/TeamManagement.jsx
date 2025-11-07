@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaTasks, FaUserTie, FaCheckCircle } from "react-icons/fa";
-import dashboardImg from "../assets/images/dashboardimg.jpg"; // Replace later with your own
+import Taskflow from "../assets/images/Taskflow.png"; // Replace later with your own
 
 const features = [
   {
@@ -33,7 +33,7 @@ const TaskManagement = () => {
           className="flex-1"
         >
           <img
-            src={dashboardImg}
+            src={Taskflow}
             alt="Task management dashboard"
             className="rounded-3xl shadow-2xl border border-blue-100 w-full object-cover"
           />
